@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unicode Text Creator</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .copy {
+            cursor: pointer;
+            display: inline-block;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .copy .tooltiptext {
+            background-color: #F0E68C;
+            border-radius: 6px;
+            color: #808000;
+            left: 110%;
+            padding: 5px 0;
+            position: absolute;
+            text-align: center;
+            visibility: hidden;
+            width: 150px;
+            z-index: 1;
+        }
+
+        .copy:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .copy .tooltiptext::after {
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #F0E68C transparent transparent;
+            content: " ";
+            margin-top: -5px;
+            position: absolute;
+            top: 25%;
+            right: 100%;
+        }
+        .textfield {
+            width: 20%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="http://www.mattrudge.net/"><i class="fa fa-home"></i></a>
+    <h1>Matt's Unicode Character Converter</h1>
+    <p>This is a toy project to demonstrate converting text into different Unicode alphabets.</p>
+    <p>You can copy the text to the clipboard by clicking on the clipboard icon.</p>
+    <p>The text can then be used in forums, messages and anywhere that supports Unicode.</p>
+    <input class="textfield" type="text" id="inputBox">
+    <button onclick="receive_text()">Submit</button>
+    <table id="outputBox"></table>
+    <p>More alphabet and pseudo-alphabets will be added as I get time. You can see the source of the project <a href="https://github.com/lechien73/unicodeconverter">here.</a></p>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/convert.js"></script>
+</body>
+
+</html>
